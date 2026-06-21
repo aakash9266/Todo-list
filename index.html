@@ -3,44 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App - Starter Template</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
-    <div class="container">
-        <div class="todo-app">
-            <header class="todo-header">
-                <h1>My Todo List</h1>
-                <p class="subtitle">Stay organized and productive</p>
-            </header>
-
-            <div class="todo-input-container">
-                <input 
-                    type="text" 
-                    id="todoInput" 
-                    class="todo-input" 
-                    placeholder="Add a new task..."
-                    autocomplete="off"
-                >
-                <button id="addTodoBtn" class="add-btn">Add</button>
-            </div>
-
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="active">Active</button>
-                <button class="filter-btn" data-filter="completed">Completed</button>
-            </div>
-
-            <ul id="todoList" class="todo-list">
-                <!-- Todo items will be dynamically added here -->
-                
-            </ul>
-
-            <div class="todo-footer">
-                <span id="itemsLeft" class="items-left"><span id="remaining-count">0</span> items left</span>
-                <button id="clearCompletedBtn" class="clear-completed">Clear Completed</button>
-            </div>
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn">Search</button>
         </div>
+
+        <!-- Weather Display Section -->
+        <div class="weather-info" id="weather-info" style="display: none;">
+            <h2 id="city-name">--</h2>
+            <p id="temperature">--°C</p>
+            <p id="description">--</p>
+        </div>
+        
+        <!-- Error Message Section -->
+        <p class="error" id="error-message"></p>
     </div>
 
     <script src="app.js"></script>
